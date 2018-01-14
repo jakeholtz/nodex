@@ -1,0 +1,23 @@
+{
+  "name": "nodex",
+  "version": "1.0.0",
+  "description": "full-stack node spa",
+  "main": "server.js",
+  "scripts": {
+    "test": "null",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "null"
+  ],
+  "author": "snakemaster general",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.11"
+  }
+}
