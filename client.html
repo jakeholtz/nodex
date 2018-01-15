@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="angularApp">
   <head>
     <title>Nodex</title>
     <style>
+      .show {
+        visibility: visible;
+      }
       body {
         background-color: #d5d2d8;
         text-align: center;
@@ -25,24 +28,30 @@
         margin: 1% auto 1% auto;
         border-radius: 5px;
         padding: 0.1% 1% 0.1% 1%;
+        visibility: hidden;
       }
-      p {
-        text-align: left;
+      strong {
+        color: blue;
       }
     </style>
   </head>
-  <body>
+  <body ng-controller="angularController as controller">
     <div>
       <h1>Nodex</h1>
-      <button type="button">Click to connect to API!</button>
+      <button onclick="(function myFunction() {
+          var element = document.querySelector('section');
+          element.classList.add('show');
+      })()">Click to connect to API!</button>
       <section>
         <p>
-          Your Latitude:
+          Your Latitude: <strong> {{controller.lat}} </strong>
         </p>
         <p>
-          Your Longitude:
+          Your Longitude: <strong> {{controller.lng}} </strong>
         </p>
       </section>
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script type="text/javascript" src="client.js"></script>
   </body>
 </html>
